@@ -1,0 +1,233 @@
+/* Base styles */
+.profile-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #000000;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    margin: 20px auto;
+    max-width: 1200px;
+    transition: transform 0.3s;
+}
+
+.profile-left-content, .profile-right-content {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+}
+
+.profile-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-header h1 {
+    font-size: 2.5em;
+    color: #ffffff;
+    margin: 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.profile-body {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-body h2 {
+    font-size: 2em;
+    color: #ffffff;
+    margin: 10px 0;
+}
+
+.profile-body p {
+    font-size: 1.2em;
+    color: #c9c9c9;
+    margin: 10px 0;
+}
+
+.profile-friends-container,
+.profile-workouts-container,
+.profile-goals-container {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.profile-friends-container h2,
+.profile-workouts-container h2,
+.profile-goals-container h2 {
+    font-size: 2em;
+    color: #ffffff;
+    margin: 10px 0;
+}
+
+.profile-show-button {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    border-radius: 25px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.profile-show-button:hover {
+    background-color: #8b8b8b;
+    transform: scale(1.1);
+}
+
+.change-profile-info-container {
+    text-align: center;
+}
+
+.change-profile-info-container h2 {
+    font-size: 2em;
+    color: #ffffff;
+    margin: 30px 0;
+}
+
+.change-profile-info-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.change-profile-info-container label {
+    font-size: 1.2em;
+    color: #ffffff;
+    margin: 5px 0 5px 0;
+}
+
+.change-profile-info-container input {
+    padding: 10px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    border: 1px solid #000000;
+    margin-bottom: 10px;
+    width: 60%;
+}
+
+.change-profile-info-container button {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    border-radius: 25px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.change-profile-info-container button:hover {
+    background-color: #949494;
+    transform: scale(1.1);
+}
+
+/* Delete button styles */
+.profile-delete-button {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 20px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    border-radius: 25px;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 20px;
+}
+
+.profile-delete-button:hover {
+    background-color: #535353;
+    transform: scale(1.1);
+}
+
+/* Modal styles */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    animation: fadeIn 0.3s;
+}
+
+.modal h2 {
+    font-size: 2em;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.modal-actions button {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    border-radius: 25px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.modal-actions button:hover {
+    background-color: #6e6e6e;
+    transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Responsive styles */
+@media (min-width: 1200px) {
+    .profile-container {
+        padding: 30px;
+    }
+
+    .profile-header h1 {
+        font-size: 3em;
+    }
+
+    .profile-body h2 {
+        font-size: 2.5em;
+    }
+
+    .profile-body p {
+        font-size: 1.5em;
+    }
+
+    .profile-show-button,
+    .change-profile-info-container button,
+    .profile-delete-button,
+    .modal-actions button {
+        font-size: 1.3em;
+        padding: 12px 25px;
+    }
+
+    .change-profile-info-container input {
+        width: 70%;
+    }
+}

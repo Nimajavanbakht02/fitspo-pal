@@ -1,0 +1,70 @@
+/* Base styles */
+.workout-box-container {
+    background-color: rgb(0, 0, 0);
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    padding: 50px;
+    margin-bottom: 30px;
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.workout-box-container:hover {
+    transform: scale(1.05);
+}
+
+.workout-box-section {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.workout-box-section h2 {
+    font-size: 1.5em;
+    color: #ffffff;
+    margin: 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.workout-box-section p {
+    font-size: 1.1em;
+    color: #ffffff;
+    margin: 5px 0;
+}
+
+.delete-button button {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    border-radius: 25px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.delete-button button:hover {
+    background-color: #717171;
+    transform: scale(1.1);
+}
+
+/* Responsive styles */
+@media (min-width: 1200px) {
+    .workout-box-container {
+        padding: 30px;
+    }
+
+    .workout-box-section h2 {
+        font-size: 1.8em;
+    }
+
+    .workout-box-section p {
+        font-size: 1.3em;
+    }
+
+    .delete-button button {
+        font-size: 1.3em;
+        padding: 12px 25px;
+    }
+}

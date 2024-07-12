@@ -1,0 +1,159 @@
+/* Base styles */
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000;
+    padding: 10px 20px;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    position: relative;
+}
+
+
+
+.header-left-content {
+    display: flex;
+    align-items: center;
+}
+
+.header-title {
+    margin: 0;
+    font-size: 1.8em;
+}
+
+.header-navbar {
+    display: flex;
+    align-items: center;
+}
+
+.header-link-container {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.header-link {
+    margin: 0 15px;
+}
+
+.header-link a, .header-logout-button button {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 1em;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.header-link a:hover, .header-logout-button button:hover {
+    color: #f30000;
+}
+
+.header-profile-pic {
+    margin-left: 20px;
+}
+
+.header-profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid rgb(0, 0, 0);
+    transition: border-color 0.3s;
+}
+
+.header-profile-img:hover {
+    border-color: #f30000;
+}
+
+/* Responsive styles */
+@media (min-width: 1200px) {
+    .header-container {
+        padding: 15px 30px;
+    }
+
+    .header-title {
+        font-size: 2em;
+    }
+
+    .header-link a, .header-logout-button button {
+        font-size: 1.2em;
+    }
+
+    .header-profile-img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .header-container {
+        padding: 10px 20px;
+    }
+
+    .header-title {
+        font-size: 1.8em;
+    }
+
+    .header-link a, .header-logout-button button {
+        font-size: 1em;
+    }
+
+    .header-profile-img {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+    .header-navbar {
+        display: none;
+    }
+
+    .header-container {
+        padding: 10px 15px;
+    }
+
+    .header-title {
+        font-size: 1.6em;
+    }
+
+    .header-link a, .header-logout-button button {
+        font-size: 0.9em;
+    }
+
+    .header-profile-img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 479px) {
+    .header-navbar {
+        display: none;
+    }
+
+    .header-container {
+        padding: 10px 10px;
+    }
+
+    .header-title {
+        font-size: 1.4em;
+    }
+
+    .header-link a, .header-logout-button button {
+        font-size: 0.8em;
+    }
+
+    .header-profile-img {
+        width: 35px;
+        height: 35px;
+    }
+}

@@ -1,0 +1,44 @@
+/* Base styles */
+.workouts-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.workouts-container h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.workout-box {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Styles for screens larger than 1200px */
+@media (min-width: 1200px) {
+    .workouts-container {
+        padding: 30px;
+    }
+    .workouts-container h1 {
+        font-size: 2.5em;
+    }
+    .workout-box {
+        max-width: 800px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .workouts-container {
+        padding: 20px;
+    }
+    .workouts-container h1 {
+        font-size: 2.2em;
+    }
+    .workout-box {
+        max-width: 600px;
+    }
+}
