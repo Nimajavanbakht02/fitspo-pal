@@ -1,14 +1,14 @@
-import GoalsList from './GoalsList';
+import GoalBox from './GoalsBox';
 
 function UserGoals({user}) {
     if (user.goals.length === 0) {
-        return <p className="Loading-message">No Current Goals!</p>;
+        return <p className="Loading-message">No Goals to display</p>;
     }
 
     function renderGoals() {
         return user.goals.map((goal) => {
             return (
-                <GoalsList goal={goal} key={goal.id} user={user}/>
+                <GoalBox goal={goal} key={goal.id} user={user}/>
             );
         });
     }

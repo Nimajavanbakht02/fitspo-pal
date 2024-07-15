@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import GoalsList from './GoalsList';
-import '../css/Goals.css';
+import GoalsBox from './GoalsBox';
+import '../styles/Goals.css';
 
 function Goals({ user }) {
     const [goals, setGoals] = useState();
@@ -14,7 +14,7 @@ function Goals({ user }) {
     return (
         <div className="goals-container">
             <h1 className="goals-header">Goals</h1>
-            {goals ? goals.map((goal) => <GoalsList key={goal.id} goal={goal} user={user}/>) : <p className="Loading-message">Loading...</p>}
+            {goals ? goals.map((goal) => <GoalsBox key={goal.id} goal={goal} user={user}/>) : <p className="Loading-message">Loading...</p>}
         </div>
     );
 }

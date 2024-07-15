@@ -1,7 +1,7 @@
 import { useState } from "react";
-import LoginForm from "./LoginForm";
-import RegisterForm from "./RegisterForm.js";
-import "../css/Login.css";
+import LoginForm from "../components/LoginForm";
+import SignUpForm from "./SignUpForm.js";
+import "../styles/Login.css";
 
 function Login({ onLogin }) {
   const [showLogin, setShowLogin] = useState(true);
@@ -13,7 +13,7 @@ function Login({ onLogin }) {
         {showLogin ? (
           <LoginForm onLogin={onLogin} />
         ) : (
-          <RegisterForm onLogin={onLogin} />
+          <SignUpForm onLogin={onLogin} />
         )}
         <button className='login-button' onClick={() => setShowLogin((show) => !show)}>
           {showLogin ? "Sign Up" : "Login"}

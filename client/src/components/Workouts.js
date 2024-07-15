@@ -1,12 +1,9 @@
-import WorkoutList from "./WorkoutList";
-import { useState, useEffect, useContext } from "react";
+import WorkoutBox from "./WorkoutBox";
+import { useState, useEffect } from "react";
+import WorkoutForm from "./WorkoutForm";
 
-
-
-function Workouts({ user, ThemeContext }) {
+function Workouts({ user }) {
     const [workouts, setWorkouts] = useState();
-    const theme = useContext(ThemeContext);
-    const classAddition = theme === 'dark' ? '-dark' : '';
 
 
     useEffect(() => {
@@ -23,10 +20,11 @@ function Workouts({ user, ThemeContext }) {
 
     return (
         <div>
+            {user ? <WorkoutForm user={user} /> : null}
             {workouts ? workouts.map((workout) => (
-                <WorkoutList key={workout.id} workout={workout} user={user} />
+                <WorkoutBox key={workout.id} workout={workout} user={user} />
             ))
-                : <p className="no-workouts-message">No current workouts!</p>
+                : <p className="no-workouts-message">No workouts to display</p>
             }
         </div>
     );

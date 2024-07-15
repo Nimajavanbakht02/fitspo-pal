@@ -1,6 +1,6 @@
+import FriendBox from "./FriendBox";
 import { useState, useEffect } from "react";
-import "../css/Friends.css";
-import FriendList from "./FriendList";
+import "../styles/Friends.css";
 
 function Friends({ user }) {
     const [friendShips, setFriendShips] = useState();
@@ -29,7 +29,7 @@ function Friends({ user }) {
     return (
         <div className="friends-container">
             <h1 className="friends-header">Friends</h1>
-            {usersFriends.length > 0 ? usersFriends.map((friendShip) => <FriendList key={friendShip.id} friendShip={friendShip} user={user} />) : <p className="no-friends-message">You have no friends</p>}
+            {usersFriends.length > 0 ? usersFriends.map((friendShip) => <FriendBox key={friendShip.id} friendShip={friendShip} user={user} />) : <p className="no-friends-message">You have no friends</p>}
         </div>
     );
 }

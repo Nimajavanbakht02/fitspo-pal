@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Friends from './Friends';
 import UserWorkouts from './UserWorkouts';
 import UserGoals from './UserGoals';
-import '../css/Profile.css';
+import '../styles/Profile.css';
 
 function Profile({ user }) {
     const [showFriends, setShowFriends] = useState(false);
@@ -53,13 +53,13 @@ function Profile({ user }) {
                     <h1>{user.username}</h1>
                 </div>
                 <div className='profile-body'>
-                    <h2>Account Details</h2>
+                    <h2>Profile Details</h2>
                     <p><strong>Email:</strong> {user.email}</p>
                     <p><strong>Username:</strong> {user.username}</p>
                     <button className='profile-delete-button' onClick={() => setShowDeleteModal(true)}>Delete Account</button>
                 </div>
                 <div className='change-profile-info-container'>
-                    <h2>Change Account Information</h2>
+                    <h2>Change Profile Information</h2>
                     <form onSubmit={handlePut}>
                         <label>Email:</label>
                         <input type='text' name='email' />

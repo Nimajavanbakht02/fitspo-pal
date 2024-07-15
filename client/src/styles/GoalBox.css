@@ -1,0 +1,102 @@
+/* Base styles */
+.goalsbox-container {
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+    text-align: center;
+}
+
+.goalsbox-container:hover {
+    transform: scale(1.05);
+}
+
+.goalsbox-container h2 {
+    font-size: 1.8em;
+    color: #000000;
+    margin: 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.goalsbox-container p {
+    font-size: 1.1em;
+    color: #666;
+    margin: 10px 0;
+}
+
+.goalsbox-container button {
+    background-color: #000000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    border-radius: 25px;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 10px;
+}
+
+.goalsbox-container button:hover {
+    background-color: #c13a22;
+    transform: scale(1.1);
+}
+
+/* Responsive styles */
+@media (min-width: 1200px) {
+    .goalsbox-container {
+        padding: 30px;
+    }
+
+    .goalsbox-container h2 {
+        font-size: 2em;
+    }
+
+    .goalsbox-container p {
+        font-size: 1.3em;
+    }
+
+    .goalsbox-container button {
+        font-size: 1.3em;
+        padding: 12px 25px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .goalsbox-container {
+        padding: 20px;
+    }
+
+    .goalsbox-container h2 {
+        font-size: 1.8em;
+    }
+
+    .goalsbox-container p {
+        font-size: 1.2em;
+    }
+
+    .goalsbox-container button {
+        font-size: 1.2em;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .goalsbox-container {
+        padding: 15px;
+    }
+
+    .goalsbox-container h2 {
+        font-size: 1.6em;
+    }
+
+    .goalsbox-container p {
+        font-size: 1em;
+    }
+
+    .goalsbox-container button {
+        font-size: 1em;
+        padding: 8px 15px;
+    }
+}

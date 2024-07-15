@@ -8,7 +8,8 @@ import Login from './Login';
 import Header from './Header';
 import Profile from './Profile';
 import Goals from './Goals';
-import '../css/App.css';
+import WorkoutForm from './WorkoutForm';
+import '../styles/App.css';
 
 const ThemeContext = createContext(null);
 

@@ -1,6 +1,6 @@
-import "../css/WorkoutList.css";
+import "../styles/WorkoutBox.css";
 
-function WorkoutList({ workout, user }) {
+function WorkoutBox({ workout, user }) {
 
     const handleDelete = async () => {
         const response = await fetch(`http://localhost:5555/workouts/${workout.id}`, {
@@ -17,23 +17,29 @@ function WorkoutList({ workout, user }) {
             console.log("Error deleting workout");
         }
     }
+    console.log(workout)
+
+    const handleName = workout.user_id !== user.id ? workout.username : user.username
+
+
 
     return (
         <div className="workout-box-container">
-            <div className="workout-box-section">
-                <h2>{workout.username}</h2>
+            <div className="workout-box-left">
+                <div className="workout-box-username-container">
+                    {user.profile_pic ? <img src={user.profile_pic} alt="profile-pic" /> : null}
+                    <h2>{handleName}</h2>
+                </div>
                 <p>Calories Burned: {workout.calories_burned}</p>
-                <p>Duration: {workout.duration}</p>
+                <p>Duration: {workout.duration}/mins</p>
             </div>
-            <div className="workout-box-section">
+            <div className="workout-box-right">
                 <p>Workout: {workout.type}</p>
                 <p>Description: {workout.description}</p>
-            </div>
-            <div className="delete-button">
-                {user.username === workout.username ? <button onClick={handleDelete}>Delete</button> : null}
+                {user.username === workout.username ? <button className="delete-button" onClick={handleDelete}>Delete</button> : null}
             </div>
         </div>
     );
 }
 
-export default WorkoutList;
+export default WorkoutBox;

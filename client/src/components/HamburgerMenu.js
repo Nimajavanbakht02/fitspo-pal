@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import '../css/ProfileMenu.css';
+import '../styles/HamburgerMenu.css';
 
-function ProfileMenu() {
+function HamburgerMenu() {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -27,4 +27,4 @@ function ProfileMenu() {
   );
 }
 
-export default ProfileMenu;
+export default HamburgerMenu;

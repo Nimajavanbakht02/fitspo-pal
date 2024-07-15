@@ -1,7 +1,7 @@
-import '../css/GoalsList.css'
+import '../styles/GoalBox.css'
 
 
-function GoalsList({ goal, user }) {
+function GoalsBox({ goal, user }) {
 
     const handleDelete = async () => {
         const response = await fetch(`http://localhost:5555/goals/${goal.id}`, {
@@ -28,4 +28,4 @@ function GoalsList({ goal, user }) {
     );
 }
 
-export default GoalsList;
+export default GoalsBox;

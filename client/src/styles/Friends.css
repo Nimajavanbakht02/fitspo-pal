@@ -1,0 +1,77 @@
+/* Base styles */
+.friends-container {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px;
+    width: 90%;
+}
+
+.friends-header {
+    font-size: 2em;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.Loading-message {
+    font-size: 1.2em;
+    color: #ffffff;
+    text-align: center;
+    margin: 20px auto;
+}
+
+/* Styles for screens larger than 1200px */
+@media (min-width: 1200px) {
+    .friends-container {
+        margin: 30px auto;
+        padding: 30px;
+    }
+    .friends-header {
+        font-size: 2.5em;
+    }
+    .Loading-message {
+        font-size: 1.5em;
+    }
+}
+
+/* Styles for screens between 768px and 1199px */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .friends-container {
+        margin: 25px auto;
+        padding: 25px;
+    }
+    .friends-header {
+        font-size: 2em;
+    }
+    .Loading-message {
+        font-size: 1.3em;
+    }
+}
+
+/* Styles for screens between 480px and 767px */
+@media (min-width: 480px) and (max-width: 767px) {
+    .friends-container {
+        margin: 20px auto;
+        padding: 20px;
+    }
+    .friends-header {
+        font-size: 1.8em;
+    }
+    .Loading-message {
+        font-size: 1.2em;
+    }
+}
+
+/* Styles for screens smaller than 480px */
+@media (max-width: 479px) {
+    .friends-container {
+        margin: 15px auto;
+        padding: 15px;
+    }
+    .friends-header {
+        font-size: 1.5em;
+    }
+    .Loading-message {
+        font-size: 1em;
+    }
+}
